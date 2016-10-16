@@ -1,0 +1,1278 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: 
+Date: Wed, 2 Feb 2011 16:58:26 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CBC2FA.6893F290"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3664
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://support.oracle.com/CSP/main/article?cmd=show&type=NOT&doctype=BULLETIN&id=144070.1
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META content=3D"text/javascript; charset=3DUTF-8" =
+http-equiv=3DContent-Script-Type><!--[if IE 7]>=0A=
+<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"/CSP/ui/css/kmstyles_ie7.css?MOS_5.2.0.10.0_GENERIC_110103.2">=0A=
+<![endif]--><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"https://support.oracle.com/CSP/ui/css/kmstyles.css?MOS_5.2.0.10.0=
+_GENERIC_110103.2"=20
+target=3Dnew><LINK rel=3Dstylesheet type=3Dtext/css=20
+href=3D"https://support.oracle.com/CSP/ui/css/kmstyles_print.css?MOS_5.2.=
+0.10.0_GENERIC_110103.2"=20
+media=3Dprint>
+<STYLE type=3Dtext/css>BODY {
+	FONT-SIZE: 10pt !important
+}
+</STYLE>
+
+<SCRIPT language=3DJavaScript type=3Dtext/javascript>=0A=
+ =0A=
+  var currentContainer =3D null;=0A=
+  var currentLink =3D null;=0A=
+  var sessId =3D =
+"e1446125346aeed5670ce26202c769deb2eaa842dd5668c5a220d6be4517a5d2";=0A=
+=0A=
+  var expandIcon =3D =
+"/CSP/ui/images/expand_white.png?MOS_5.2.0.10.0_GENERIC_110103.2";=0A=
+  var collapseIcon =3D =
+"/CSP/ui/images/collapse_white.png?MOS_5.2.0.10.0_GENERIC_110103.2";=0A=
+  var multipleArticles =3D false;=0A=
+=0A=
+  var bugsContent =3D new Object();=0A=
+  //in case of duplicate bug ids, save all bug bodies as fields of =
+bugsContent=0A=
+=0A=
+  function mosSearch(query)=0A=
+  {=0A=
+     var error =3D false;=0A=
+    =0A=
+     if (parent.mosSearch)=0A=
+     {=0A=
+       parent.mosSearch(query);=0A=
+     }=0A=
+     else if (window.opener)=0A=
+     {=0A=
+       if (window.opener.mosSearch)=0A=
+       {=0A=
+         window.opener.mosSearch(query);=0A=
+         window.close();=0A=
+       }=0A=
+       else=0A=
+       {=0A=
+         error =3D true;=0A=
+       }=0A=
+     }=0A=
+     else=0A=
+     {=0A=
+       error =3D true;=0A=
+     }  =0A=
+    =0A=
+     if (error)=0A=
+        alert('Unable to run a My Oracle Support search. Please ensure =
+you are viewing this document from within My Oracle Support');=0A=
+  }=0A=
+=0A=
+   function getDocumentDetails() {=0A=
+       var docDetails =3D new Object();=0A=
+       docDetails =3D {category:"KM", docID:"144070.1", =
+docTitle:"Identifying Unused Indexes", docType:"BULLETIN", =
+docDataGroup:"NOT", remarks:"%3Cremarks%3E%0A%3C%2Fremarks%3E%0A"};=0A=
+       return docDetails;=0A=
+   }=0A=
+</SCRIPT>
+
+<SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+src=3D"https://support.oracle.com/CSP/ui/scripts/kmviewer.js?MOS_5.2.0.10=
+.0_GENERIC_110103.2"></SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY onresize=3DdoResize(); onload=3DdoResize();verifyClickstream();>
+<DIV id=3DmainHtmlDocument><FONT face=3Dhelvetica>
+<P><A name=3Dtop></A></P><BR>
+<TABLE border=3D0 cellSpacing=3D6 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop colSpan=3D6 align=3Dleft><STRONG>Identifying Unused =
+Indexes [ID=20
+      144070.1]</STRONG></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop colSpan=3D6 align=3Dleft>
+      <HR SIZE=3D1>
+    </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%" colSpan=3D2>&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"50%" colSpan=3D3 noWrap><EM>Modified</EM>=20
+      21-OCT-2010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Type</EM>=20
+      BULLETIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Status</EM> =
+PUBLISHED</TD>
+    <TD vAlign=3Dtop>&nbsp;</TD></TR></TBODY></TABLE></FONT><PRE><FONT =
+face=3D"Courier New, Courier, mono">
+***Checked for relevance on 25-Jul-2010***
+
+
+PURPOSE
+-------
+
+The purpose of this document is to explain how to find unused indexes=20
+using the feature in Oracle 9i and above: "Identifying Unused Indexes" =
+via
+ALTER INDEX MONITORING USAGE, as mentioned in Oracle9i Database=20
+Administrator's Guide, Chapter 11.
+
+The clause MONITORING / NOMONITORING USAGE is useful in determining
+whether an index is being used.=20
+
+=20
+SCOPE &amp; APPLICATION
+-------------------
+
+This article is intended for database Administrators who want to
+identify unused indexes in their database.
+
+
+IDENTIFYING UNUSED INDEXES
+--------------------------
+=20
+You can find indexes that are not being used by using the ALTER INDEX
+MONITORING USAGE functionality over a period of time that is
+representative of your workload.
+
+PART 1 will demonstrate the new feature using a simple example.
+
+PART 2 will give a detailed instruction how to identify all unused
+indexes in the database.
+
+
+PART 1  -  Monitoring usage of indexes - a simple example
+---------------------------------------------------------
+
+To demonstrate the new feature, you can use the following example:
+(a) Create and populate a small test table
+(b) Create Primary Key index on that table
+(c) Query v$object_usage: the monitoring has not started yet
+(d) Start monitoring of the index usage
+(e) Query v$object_usage to see the monitoring in progress
+(f) Issue the SELECT statement which uses the index
+(g) Query v$object_usage again to see that the index has been used
+(h) Stop monitoring of the index usage
+(i) Query v$object_usage to see that the monitoring stopped
+
+
+Detailed steps:
+
+(a) Create and populate a small test table
+
+   create table products
+   (prod_id number(3),
+    prod_name_code varchar2(5));
+=20
+   insert into products values(1,'aaaaa');
+   insert into products values(2,'bbbbb');
+   insert into products values(3,'ccccc');
+   insert into products values(4,'ddddd');
+   commit;
+
+
+(b) Create Primary Key index on that table
+
+   alter table products
+   add (constraint products_pk primary key (prod_id));
+
+
+(c) Query v$object_usage: the monitoring has not started yet
+
+   column index_name format a12
+   column monitoring format a10
+   column used format a4
+   column start_monitoring format a19
+   column end_monitoring format a19
+   select index_name,monitoring,used,start_monitoring,end_monitoring
+   from v$object_usage;
+
+   no rows selected
+
+
+(d) Start monitoring of the index usage
+
+   alter index products_pk monitoring usage;
+
+   Index altered.
+
+
+(e) Query v$object_usage to see the monitoring in progress
+
+   select index_name,monitoring,used,start_monitoring,end_monitoring
+   from v$object_usage;
+
+   INDEX_NAME   MONITORING USED START_MONITORING    END_MONITORING
+   ------------ ---------- ---- ------------------- -------------------
+   PRODUCTS_PK  YES        NO   04/25/2001 15:43:13
+
+Note: Column MONITORING=3D'YES', START_MONITORING gives the timestamp.
+
+
+(f) Issue the SELECT statement which uses the index
+
+First, make sure that index will be used for this statement.
+Create plan_table in your schema, as required by Oracle Autotrace
+utility:
+
+   @$ORACLE_HOME/rdbms/admin/utlxplan
+
+   Table created.
+
+Use Oracle Autotrace utility to obtain the execution plan:
+
+   set autotrace on explain
+   select * from products where prod_id =3D 2;=20
+    .
+    .=20
+    Execution Plan
+    ------------------------------------------------------
+     0     SELECT STATEMENT Optimizer=3DCHOOSE
+     1  0  TABLE ACCESS (BY INDEX ROWID) OF 'PRODUCTS'
+     2  1    INDEX (UNIQUE SCAN) OF 'PRODUCTS_PK' (UNIQUE)
+
+   set autotrace off
+
+Now, since you know the index will be used for this query, issue the
+actual SELECT statement:
+
+   select * from products where prod_id =3D 2;
+
+      PROD_ID PROD_
+   ---------- -----
+            2 bbbbb
+
+
+(g) Query v$object_usage again to see that the index has been used
+
+   select index_name,monitoring,used,start_monitoring,end_monitoring
+   from v$object_usage;
+
+   INDEX_NAME   MONITORING USED START_MONITORING    END_MONITORING
+   ------------ ---------- ---- ------------------- -------------------
+   PRODUCTS_PK  YES        YES  04/25/2001 15:43:13
+
+Note: Column USED=3D'YES'.
+
+
+(h) Stop monitoring of the index usage
+
+   alter index products_pk nomonitoring usage;
+
+   Index altered.
+
+
+(i) Query v$object_usage to see that the monitoring stopped
+
+   select index_name,monitoring,used,start_monitoring,end_monitoring
+   from v$object_usage;
+
+   INDEX_NAME   MONITORING USED START_MONITORING    END_MONITORING
+   ------------ ---------- ---- ------------------- -------------------
+   PRODUCTS_PK  NO         YES  04/25/2001 15:43:13 04/25/2001 15:48:44
+
+Note: Column MONITORING=3D'NO', END_MONITORING gives the timestamp.
+
+
+
+PART 2  -  How to identify all unused indexes in the database
+-------------------------------------------------------------
+
+To identify all unused indexes in the database, you can do the
+following:
+(a) Create a SQL script to start monitoring all indexes except those
+    owned by users SYS and SYSTEM
+(b) Create another script to stop monitoring all indexes except those
+    owned by users SYS and SYSTEM
+(c) Connect as a user with ALTER ANY INDEX system privilege and run
+    the start monitoring script
+(d) Perform normal activities in your database
+(e) After a period of time that is representative of your workload,
+    run the stop monitoring script
+(f) Query v$object_usage to see what indexes have not been used
+
+
+Detailed steps:
+
+(a) Create a SQL script to start monitoring all indexes except those
+    owned by users SYS and SYSTEM
+
+   set heading off
+   set echo off
+   set feedback off
+   set pages 10000
+   spool startmonitor.sql
+   select 'alter index '||owner||'.'||index_name||' monitoring usage;'
+   from dba_indexes
+   where owner not in ('SYS','SYSTEM');
+   spool off
+
+
+(b) Create another script to stop monitoring all indexes except those
+    owned by users SYS and SYSTEM
+
+   set heading off
+   set echo off
+   set feedback off
+   set pages 10000
+   spool stopmonitor.sql
+   select 'alter index '||owner||'.'||index_name||' nomonitoring usage;'
+   from dba_indexes
+   where owner not in ('SYS','SYSTEM');
+   spool off
+
+
+(c) Connect as a user with ALTER ANY INDEX system privilege and run
+    the newly created script to start monitoring.
+
+   @startmonitor
+
+(d) Perform normal activities in your database
+
+
+(e) After a period of time that is representative of your workload,
+    connect as a user with ALTER ANY INDEX system privilege and run
+    the script to stop monitoring.
+
+   @stopmonitor
+
+
+(f) Query v$object_usage in join with dba_indexes, to see what indexes
+    have not been used
+
+   select d.owner, v.index_name
+   from dba_indexes d, v$object_usage v
+   where v.used=3D'NO' and d.index_name=3Dv.index_name;
+
+
+
+RELATED DOCUMENTS
+-----------------
+
+Note:1033478.6 Script Monitoring the Usage of Indexes(prior Oracle9i)
+Note:1015945.102 How to Monitor Most Recently Accessed Indexessing =
+script
+
+Oracle9i Database Administrator's Guide
+</FONT></PRE><BR>
+<TABLE width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD colSpan=3D2>
+      <P><IMG style=3D"CURSOR: pointer" id=3DcollapseImg2=20
+      onclick=3D"toggleVisibility(this.id, 'collapsibleRelatedData');"=20
+      alt=3D"Show Related Information"=20
+      =
+src=3D"https://support.oracle.com/CSP/ui/images/collapse_white.png?MOS_5.=
+2.0.10.0_GENERIC_110103.2">=20
+      <B>Related</B><BR>
+      <DIV style=3D"WIDTH: 100%; DISPLAY: inline; MARGIN-LEFT: 20px"=20
+      id=3DcollapsibleRelatedData>
+      <HR SIZE=3D1>
+      <B style=3D"MARGIN-LEFT: 20px">Products</B>=20
+      <HR style=3D"MARGIN-LEFT: 20px" SIZE=3D1>
+
+      <UL>
+        <LI>Oracle Database Products &gt; Oracle Database &gt; Oracle =
+Database=20
+        &gt; Oracle Server - Enterprise Edition </LI></UL></DIV><BR>
+      <P></P></TD></TR></TBODY></TABLE>
+<P><A=20
+href=3D"https://support.oracle.com/CSP/main/article?cmd=3Dshow&amp;type=3D=
+NOT&amp;doctype=3DBULLETIN&amp;id=3D144070.1#top"><IMG=20
+id=3DbackToTopImg border=3D0 alt=3D"Back to top"=20
+src=3D"https://support.oracle.com/CSP/ui/images/top_white.png?MOS_5.2.0.1=
+0.0_GENERIC_110103.2">Back=20
+to top</A></P></DIV>
+<DIV id=3DfeedbackBottomLeft><A class=3DrateDocumentLabel=20
+href=3D"javascript:displayFeedbackBox()">Rate this document&nbsp;<IMG =
+border=3D0=20
+src=3D"https://support.oracle.com/CSP/ui/images/rate_article_ovr_16.png?M=
+OS_5.2.0.10.0_GENERIC_110103.2"></A></DIV>
+<DIV style=3D"POSITION: absolute; BACKGROUND-COLOR: #fffeed; DISPLAY: =
+none"=20
+id=3DfeedbackBox>
+<FORM name=3Dfeedback><INPUT id=3DarticleId value=3D144070.1 =
+type=3Dhidden=20
+name=3DarticleId> <INPUT id=3DfeedBackText=20
+value=3D'Thank you for your feedback. Please help us to improve our =
+content; comments are required when selecting a rating of "Poor" or "Not =
+Easy" to find. '=20
+type=3Dhidden name=3DfeedBackText> <INPUT id=3DinitialCommentText=20
+value=3D"Provide feedback for this article. Please use 'Contact Us' for =
+other feedback."=20
+type=3Dhidden name=3DinitialCommentText>=20
+<TABLE class=3Dtables border=3D0 width=3D500 height=3D350>
+  <TBODY>
+  <TR>
+    <TD class=3Dtables height=3D230 vAlign=3Dtop>
+      <DIV class=3DlabelHeading>Article Rating </DIV>
+      <TABLE border=3D0 width=3D200>
+        <TBODY>
+        <TR>
+          <TD class=3DlabelField>Rate this document</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drating =
+onclick=3DquestionAnswered()=20
+            value=3D3 type=3Dradio name=3Drating>Excellent</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drating =
+onclick=3DquestionAnswered()=20
+            value=3D2 type=3Dradio name=3Drating>Good</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drating =
+onclick=3DquestionAnswered()=20
+            value=3D1 type=3Dradio name=3Drating>Poor</TD></TR>
+        <TR>
+          <TD class=3DhorizontalLine width=3D"100%"></TD></TR>
+        <TR>
+          <TD class=3DlabelField>Did this document help you?</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drelevancy =
+onclick=3DquestionAnswered()=20
+            value=3D3 type=3Dradio name=3Drelevancy>Yes</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drelevancy =
+onclick=3DquestionAnswered()=20
+            value=3D2 type=3Dradio name=3Drelevancy>No</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3Drelevancy =
+onclick=3DquestionAnswered()=20
+            value=3D1 type=3Dradio name=3Drelevancy>Just =
+browsing</TD></TR>
+        <TR>
+          <TD class=3DhorizontalLine width=3D"100%"></TD></TR>
+        <TR>
+          <TD class=3DlabelField>How easy was it to find this =
+document?</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3DeaseOfUse =
+onclick=3DquestionAnswered()=20
+            value=3D3 type=3Dradio name=3DeaseOfUse>Very easy</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3DeaseOfUse =
+onclick=3DquestionAnswered()=20
+            value=3D2 type=3Dradio name=3DeaseOfUse>Somewhat =
+easy</TD></TR>
+        <TR>
+          <TD class=3DlabelOption><INPUT id=3DeaseOfUse =
+onclick=3DquestionAnswered()=20
+            value=3D1 type=3Dradio name=3DeaseOfUse>Not =
+easy</TD></TR></TBODY></TABLE></TD>
+    <TD class=3DverticalLine></TD>
+    <TD height=3D230 vAlign=3Dtop width=3D290>
+      <DIV class=3DlabelHeading>Comments</DIV><TEXTAREA =
+style=3D"FONT-SIZE: 12px" id=3DcommentsInput class=3DlabelTextareaEmpty =
+onfocus=3DactivateBox(this) onkeyup=3DenableSubmit() rows=3D14 cols=3D70 =
+name=3DcommentsInput width=3D"100%" height=3D"100%">Provide feedback for =
+this article. Please use 'Contact Us' for other feedback.</TEXTAREA>=20
+
+      <P><B>Important Note:</B> this feedback is anonymously visible to =
+other=20
+      customers until processed by Oracle Support.</P></TD></TR>
+  <TR>
+    <TD class=3DhorizontalLine width=3D"100%" colSpan=3D3></TD></TR>
+  <TR>
+    <TD height=3D30 width=3D500 colSpan=3D3>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD align=3Dleft><A class=3DlinkButton=20
+            href=3D"javascript:displayFeedbackBox()">Cancel</A></TD>
+          <TD width=3D"99%"></TD>
+          <TD align=3Dright><INPUT id=3DsubmitBtn class=3DinputButton =
+disabled onclick=3DsubmitFeedback() value=3D"Send Rating" type=3Dbutton =
+name=3DsubmitBtn></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FO=
+RM></DIV>
+<SCRIPT>=0A=
+var rateArticleSuccess =3D "Your rating was sent to Oracle";=0A=
+var rateArticleFailure =3D "Unable to Rate Document";=0A=
+checkArticleRatingStatus();=0A=
+</SCRIPT>
+<!--<EMMOS_CONTEXT_STRING><RICTXXMLSTR><ARTICLE><ID>144070.1</ID><context=
+  id =3D "144070.1" doc_type =3D "BULLETIN" title =3D "Identifying =
+Unused Indexes" type =3D "NOT" =
+/></ARTICLE></RICTXXMLSTR></EMMOS_CONTEXT_STRING>--><!--{{FFFFFFFFFFFFFFF=
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFIF}}--></BODY></HTML>
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: https://support.oracle.com/CSP/ui/images/collapse_white.png?MOS_5.2.0.10.0_GENERIC_110103.2
+
+iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAABGdBTUEAALGPC/xhBQAAABl0RVh0
+U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADLSURBVChTY/wPBAzEApBiYgEDsQrBLiBZ
+MbNd039mx/b/LC49/1k9Jv1n8Zr2n9Vn9n9W/7n/WQMWgDHcZGbLyv+iUUv/R/Ru+p81c+f/+uWH
+/0/Zeub/ykPX/kd37wFqmo9QzKTs/p/Zsuq/aPTS/8Fd6/+nTN32v2LRgf8uNVuANsz4z2JbjVAM
+YoE1WFX/FwFq8Gtb+18ra81/Frf+/8wmmXBvoXgQpIEJqoHFoQ2oMB3F/xihwaTqCbYBXSF5QUds
+WJMeKQNvMgAYnUQemc8m6gAAAABJRU5ErkJggg==
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: https://support.oracle.com/CSP/ui/images/top_white.png?MOS_5.2.0.10.0_GENERIC_110103.2
+
+iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAMhJREFU
+KFNj/Pfv338GYgFIMbGYgViFYBcMUsXMJun/ma2q/zOpemJ4HMXNIIUsDm3/RaKX/mcCaVB2R9EA
+V8xskvmfxa3/v1bWmv9+bWvBGsA2IGkAK2axrf7P6jPjv0vNlv8Viw78T5m67X9w1/r/oiANllVw
+DWDFrP7z/0d37/m/8tC1/1O2nvlfv/zw/6yZO/9H9G76LxoF0lAJdg5EccACCPafC7Rh9n8Wr2n/
+WT0m/Wdx6fnP7Nj+n9muCaGY2IgZJDEIAJpKQqqGA5DlAAAAAElFTkSuQmCC
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: https://support.oracle.com/CSP/ui/images/rate_article_ovr_16.png?MOS_5.2.0.10.0_GENERIC_110103.2
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAiRJREFUeNqMk89rE0EUx79rKwh6ickirmR7ENQulYgrIStE/AP0YMGL
+HsRjwVu8iJ49e5HSXnrMIaKCLpFUxVr0oC7Yra0eJEuVmENASSG0QmbH9yaza2JRfLNvf8zM5833
+vZk1pJRoNpuy1WohFgIxfcdxrFzG/C4g9LfrurAsy8CQjfON4XK5DMlNUoe68UMqr9frmMiMYeGa
+p7pvPfhiJOPj+D0ftDw0CZkEoNb9uoZHC7O46QIdNcFOg+xSnOgPOA3FGuTA0ftlbDwl+P6Ggs0g
+VX8+TUFoqcmKiqRr7eVD+HevK7harSL4cREZ1LD0eWsuiaIViCF4oGTleU3D70j3BIIgQKZZQ3vv
+CSyudnya8iFVkJhBjWqPaGUZT+ZuaPgUOvNQ8J7jF7B7U01lOEoDSN4yVkBPhmu3r47A85R39swM
+socOQ0SKi0a2kfeZZf8N3udeUnCxWES3uzksWteAAnDhwhf3sM6lHoJZtnXkJAqFArL7szRNYMdB
+inUKn177ePsNuDwNOCbD07CnTsNxHFgHLX1KZQp7njcIsL39k3YixjPK7EqBoppHMXbAQX7Kw+Tk
+MeTzeUpzdOU/FAi1hY9ffYTv+2ogl8vBNE3Yto2IClepVNDr9dRYqVRiGd/JzxosPQxDGa6GEP2+
+kigEpzT4gRJrt9toNBoqVbIthsnfGFJK/Ms4zyGbIb9Dfo58ccdB+g+bJV8iX086fgkwAOJyRif2
+RjX4AAAAAElFTkSuQmCC
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://support.oracle.com/CSP/ui/css/kmstyles.css?MOS_5.2.0.10.0_GENERIC_110103.2
+
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif !important; =
+OVERFLOW: hidden
+}
+H1.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+130%; PADDING-TOP: 1em
+}
+H2.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; COLOR: #333333; FONT-SIZE: 105%; PADDING-TOP: 0.5em
+}
+H3.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+103%; PADDING-TOP: 0.5em
+}
+H4.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: =
+100%
+}
+TABLE.km {
+	BORDER-LEFT: #c4d1e6 1px solid; BORDER-TOP: #c4d1e6 1px solid
+}
+TD.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: =
+4px; PADDING-RIGHT: 4px; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+FONT-SIZE: 90%; VERTICAL-ALIGN: top; BORDER-RIGHT: #c4d1e6 1px solid; =
+PADDING-TOP: 4px
+}
+TH.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: =
+2px; BACKGROUND-COLOR: #dee6ef; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; FONT-WEIGHT: bold; BORDER-RIGHT: #c4d1e6 1px solid; =
+PADDING-TOP: 2px
+}
+.kmnotebox {
+	BORDER-BOTTOM: #c1a90d 2px solid; BORDER-LEFT: #c1a90d 2px solid; =
+PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fefcee; PADDING-LEFT: 10px; =
+PADDING-RIGHT: 10px; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+FONT-SIZE: 100%; BORDER-TOP: #c1a90d 2px solid; BORDER-RIGHT: #c1a90d =
+2px solid; PADDING-TOP: 10px
+}
+PRE.km {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+CODE.km {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+DIV.kmcodeblock {
+	BORDER-BOTTOM: #c4d1e6 1px solid; BORDER-LEFT: #c4d1e6 1px solid; =
+PADDING-BOTTOM: 0.5em; BACKGROUND-COLOR: #eef3f7; MARGIN: 5px 0px 0px; =
+PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; OVERFLOW: auto; BORDER-TOP: =
+#c4d1e6 1px solid; BORDER-RIGHT: #c4d1e6 1px solid; PADDING-TOP: 0.5em
+}
+DIV.kmindent1 {
+	PADDING-LEFT: 40px; DISPLAY: block
+}
+DIV.kmindent2 {
+	PADDING-LEFT: 80px; DISPLAY: block
+}
+SPAN.kmfixedwidthfont {
+	FONT-FAMILY: "Courier New", Courier, monospace
+}
+H2.awiz {
+	BORDER-BOTTOM: #c4d1e6 1px solid; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; COLOR: #333333; FONT-SIZE: 105%
+}
+H3.awiz {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+103%
+}
+PRE.awiz {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+CODE.awiz {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+FONT {
+	FONT-FAMILY: inherit !important
+}
+TABLE {
+	FONT-FAMILY: Arial, Helvetica, sans-serif !important
+}
+.hparam {
+	FONT-STYLE: italic; COLOR: #666666; FONT-WEIGHT: normal
+}
+.hvalue {
+	FONT-WEIGHT: bold
+}
+.section1 {
+	MARGIN-TOP: 5px; FONT-SIZE: 103%; FONT-WEIGHT: bold
+}
+.section2 {
+	MARGIN-TOP: 5px; FONT-SIZE: 101%; FONT-WEIGHT: bold
+}
+TABLE.mos {
+	BORDER-BOTTOM: #c4d1e6 1px solid; BORDER-LEFT: #c4d1e6 1px solid
+}
+TD.mos {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; BORDER-TOP: #c4d1e6 1px solid; BORDER-RIGHT: =
+#c4d1e6 1px solid; PADDING-TOP: 4px
+}
+TD.mos_lite {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; BORDER-RIGHT: #c4d1e6 1px solid; PADDING-TOP: 4px
+}
+TH.mos {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #dee6ef; =
+PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; FONT-SIZE: 90%; VERTICAL-ALIGN: top; BORDER-TOP: #c4d1e6 1px =
+solid; FONT-WEIGHT: bold; BORDER-RIGHT: #c4d1e6 1px solid; PADDING-TOP: =
+2px
+}
+#mainHtmlDocument {
+	PADDING-BOTTOM: 8px; OVERFLOW-X: auto; OVERFLOW-Y: auto; PADDING-LEFT: =
+8px; PADDING-RIGHT: 8px; PADDING-TOP: 8px
+}
+#feedbackBox {
+	BORDER-BOTTOM: 3px inset; POSITION: absolute; BORDER-LEFT: 0px inset; =
+BACKGROUND-COLOR: #fffeed; WIDTH: 600px; DISPLAY: none; FONT-FAMILY: =
+Tahoma; HEIGHT: 350px; BORDER-TOP: 0px inset; BORDER-RIGHT: 3px inset; =
+LEFT: 40px
+}
+#feedbackBottomLeft {
+	MARGIN: 5px; FONT-FAMILY: Tahoma; HEIGHT: 40px
+}
+TABLE.tables {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; =
+BACKGROUND-COLOR: #fffeed; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 500px; =
+PADDING-RIGHT: 0px; HEIGHT: 350px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; =
+PADDING-TOP: 0px
+}
+TABLE.tables TR {
+	BACKGROUND-COLOR: #fffeed
+}
+TABLE.tables TD {
+	BACKGROUND-COLOR: #fffeed
+}
+.vLine {
+	BORDER-LEFT: #999999 1px solid; PADDING-LEFT: 3px
+}
+.labelHeading {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fffeed; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; COLOR: #364a8d; FONT-SIZE: 11px; FONT-WEIGHT: bold; =
+PADDING-TOP: 2px
+}
+.labelField {
+	PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #fffeed; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: =
+normal; PADDING-TOP: 1px
+}
+.labelFieldHLine {
+	PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #fffeed; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: =
+normal; PADDING-TOP: 1px
+}
+.labelFieldHLine {
+	BORDER-TOP: #999999 1px solid
+}
+.labelOption {
+	PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #fffeed; PADDING-LEFT: 10px; =
+PADDING-RIGHT: 1px; COLOR: #262626; FONT-SIZE: 9px; FONT-WEIGHT: normal; =
+PADDING-TOP: 1px
+}
+.labelOption INPUT {
+	HEIGHT: 12px
+}
+.labelTextareaEmpty {
+	WIDTH: 380px; HEIGHT: 220px; COLOR: #666666; FONT-SIZE: 9px; =
+FONT-WEIGHT: normal
+}
+.labelTextareaText {
+	WIDTH: 380px; HEIGHT: 220px; COLOR: #262626; FONT-SIZE: 9px; =
+FONT-WEIGHT: normal
+}
+.buttonsLine {
+	HEIGHT: 30px; BORDER-TOP: #999999 1px solid
+}
+A.linkButton {
+	COLOR: #000099; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+.inputButton {
+	COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+A.rateDocumentLabel {
+	COLOR: #42497d; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://support.oracle.com/CSP/ui/css/kmstyles_print.css?MOS_5.2.0.10.0_GENERIC_110103.2
+
+BODY {
+	OVERFLOW-X: visible; FONT-FAMILY: Arial, Helvetica, sans-serif =
+!important
+}
+H1.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+130%; PADDING-TOP: 1em
+}
+H2.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; COLOR: #333333; FONT-SIZE: 105%; PADDING-TOP: 0.5em
+}
+H3.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+103%; PADDING-TOP: 0.5em
+}
+H4.km {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: =
+100%
+}
+TABLE.km {
+	BORDER-LEFT: #c4d1e6 1px solid; BORDER-TOP: #c4d1e6 1px solid
+}
+TD.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: =
+4px; PADDING-RIGHT: 4px; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+FONT-SIZE: 90%; VERTICAL-ALIGN: top; BORDER-RIGHT: #c4d1e6 1px solid; =
+PADDING-TOP: 4px
+}
+TH.km {
+	BORDER-BOTTOM: #c4d1e6 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: =
+2px; BACKGROUND-COLOR: #dee6ef; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; FONT-WEIGHT: bold; BORDER-RIGHT: #c4d1e6 1px solid; =
+PADDING-TOP: 2px
+}
+.kmnotebox {
+	BORDER-BOTTOM: #c1a90d 2px solid; BORDER-LEFT: #c1a90d 2px solid; =
+PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fefcee; PADDING-LEFT: 10px; =
+PADDING-RIGHT: 10px; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+FONT-SIZE: 100%; BORDER-TOP: #c1a90d 2px solid; BORDER-RIGHT: #c1a90d =
+2px solid; PADDING-TOP: 10px
+}
+PRE.km {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+CODE.km {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+DIV.kmcodeblock {
+	BORDER-BOTTOM: #c4d1e6 1px solid; BORDER-LEFT: #c4d1e6 1px solid; =
+PADDING-BOTTOM: 0.5em; BACKGROUND-COLOR: #eef3f7; MARGIN: 5px 0px 0px; =
+PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; OVERFLOW: visible; =
+BORDER-TOP: #c4d1e6 1px solid; BORDER-RIGHT: #c4d1e6 1px solid; =
+PADDING-TOP: 0.5em
+}
+DIV.kmindent1 {
+	PADDING-LEFT: 40px; DISPLAY: block
+}
+DIV.kmindent2 {
+	PADDING-LEFT: 80px; DISPLAY: block
+}
+SPAN.kmfixedwidthfont {
+	FONT-FAMILY: "Courier New", Courier, monospace
+}
+H2.awiz {
+	BORDER-BOTTOM: #c4d1e6 1px solid; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; COLOR: #333333; FONT-SIZE: 105%
+}
+H3.awiz {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: =
+103%
+}
+PRE.awiz {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+CODE.awiz {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 90%
+}
+FONT {
+	FONT-FAMILY: inherit !important
+}
+TABLE {
+	FONT-FAMILY: Arial, Helvetica, sans-serif !important
+}
+.hparam {
+	FONT-STYLE: italic; COLOR: #666666; FONT-WEIGHT: normal
+}
+.hvalue {
+	FONT-WEIGHT: bold
+}
+.section1 {
+	MARGIN-TOP: 5px; FONT-SIZE: 103%; FONT-WEIGHT: bold
+}
+.section2 {
+	MARGIN-TOP: 5px; FONT-SIZE: 101%; FONT-WEIGHT: bold
+}
+TABLE.mos {
+	BORDER-BOTTOM: #c4d1e6 1px solid; BORDER-LEFT: #c4d1e6 1px solid
+}
+TD.mos {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; BORDER-TOP: #c4d1e6 1px solid; BORDER-RIGHT: =
+#c4d1e6 1px solid; PADDING-TOP: 4px
+}
+TD.mos_lite {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 90%; =
+VERTICAL-ALIGN: top; BORDER-RIGHT: #c4d1e6 1px solid; PADDING-TOP: 4px
+}
+TH.mos {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #dee6ef; =
+PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; FONT-SIZE: 90%; VERTICAL-ALIGN: top; BORDER-TOP: #c4d1e6 1px =
+solid; FONT-WEIGHT: bold; BORDER-RIGHT: #c4d1e6 1px solid; PADDING-TOP: =
+2px
+}
+* {
+	OVERFLOW: visible !important
+}
+
+------=_NextPart_000_0000_01CBC2FA.6893F290
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://support.oracle.com/CSP/ui/scripts/kmviewer.js?MOS_5.2.0.10.0_GENERIC_110103.2
+
+function doResize() { =20
+    if(document.all && !window.XMLHttpRequest && !window.opera){
+        // IE6 only resize problem
+        var w=3Ddocument.documentElement.clientWidth;
+        document.body.style.width =3D (((w-40)/w)*100)+'%';
+    }
+    var clHeight=3D0;
+    var clWidth=3D0;
+    if(typeof(window.innerWidth)=3D=3D"number"){// None -IE
+        clHeight=3Dwindow.innerHeight;
+        clWidth=3Dwindow.innerWidth;
+    }
+    else if(document.documentElement && =
+(document.documentElement.clientWidth =
+||document.documentElement.clientHeight)){
+        clHeight=3Ddocument.documentElement.clientHeight;
+        clWidth=3Ddocument.documentElement.clientWidth;
+    }
+    else if(document.body && (document.body.clientWidth =
+||document.body.clientHeight)){
+        clHeight=3Ddocument.body.clientHeight;
+        clWidth=3Ddocument.body.clientWidth;
+    }
+    var elMain=3Ddocument.getElementById('mainHtmlDocument');
+    var elFBar=3Ddocument.getElementById('feedbackBottomLeft');
+    elMain.style.width=3D(clWidth-16)+'px';
+    if (elFBar!=3Dnull && elFBar.style.display !=3D 'none') {
+        elMain.style.height=3D(clHeight-60)+'px';
+    }
+    else {
+        elMain.style.height=3D(clHeight-16)+'px';
+    }
+    var fBox=3Ddocument.getElementById('feedbackBox');
+    if (fBox!=3Dnull) {
+        fBox.style.top=3D(clHeight-400)+'px';=20
+    }
+}
+
+function toggleVisibility(source, target) {=20
+  var toggledObj =3D document.getElementById(target);
+  var imgObj =3D document.getElementById(source);=20
+  var footerDisplayed =3D (toggledObj.style.display =3D=3D "none");=20
+  if (footerDisplayed) {
+    toggledObj.style.display =3D "block";
+    toggledObj.style.overflow =3D "visible";=20
+    imgObj.src =3D collapseIcon;
+  } else {
+    toggledObj.style.display =3D "none";
+    toggledObj.style.overflow =3D "visible";
+    imgObj.src =3D expandIcon;
+  }
+}
+
+function expandCollapseSections(expand, sectionsList) {
+  var imgObj,sectionObj;
+  for (var i=3D0; i<sectionsList.length; i++) {
+	  try {
+		imgObj =3D document.getElementById(sectionsList[i][0]);=20
+		sectionObj =3D document.getElementById(sectionsList[i][1]);
+		sectionObj.style.display =3D expand ? "block" : "none";=09
+		imgObj.src =3D expand ? collapseIcon : expandIcon;
+	  }catch(err){
+		// ignore wrong sections
+	  }
+  }=09
+}
+
+function displayBug(source, bugProductFamily) {=20
+  if (currentContainer !=3D null) {
+    currentContainer.style.display =3D "none";
+  }
+  if (currentLink !=3D null) {
+    currentLink.style.backgroundColor =3D "";=20
+    //currentLink.style.fontWeight =3D "normal";
+  }
+  if (source !=3D null) {=20
+    source.style.backgroundColor =3D "#ACDEFC";
+    //source.style.fontWeight =3D "bold";
+    currentLink =3D source;
+  }
+  var bugContainer =3D document.getElementById(bugProductFamily);
+  if (bugContainer !=3D null) {=20
+    currentContainer =3D bugContainer;
+    currentContainer.style.display =3D "inline";
+    currentContainer.innerHTML =3D bugsContent[bugProductFamily];
+  }
+}
+
+// On load check to see if we log here clickstream
+function verifyClickstream() {
+//  if( multipleArticles ) return;
+//  if (!parent || !parent.IFrameLoaded) { // not in iframe or in =
+another parent
+//    var docDetails =3D getDocumentDetails();
+//    externalClickstream( docDetails );
+//  }
+}
+=20
+// On tab activate showing one article of many
+function pushDocDetails( docDetails ) {
+//  if( parent && parent.pushDocumentDetails ) {
+//    parent.pushDocumentDetails( docDetails );
+//  }
+//  else {
+    externalClickstream( docDetails );
+//  }
+}
+
+// Clickstream log for opening in external windows of articles
+function externalClickstream( docDetails ) {
+	var clickstreamValue =3D '<Click =
+category=3D"'+docDetails.category+'">';
+	clickstreamValue +=3D '<![CDATA[<entry action_type=3D"show" ';
+	clickstreamValue +=3D ' session_id=3D"' + sessId + '" ';
+	clickstreamValue +=3D 'item_id=3D"';
+	clickstreamValue +=3D docDetails.docID;
+	clickstreamValue +=3D '" note_id=3D"';
+	clickstreamValue +=3D docDetails.docDataGroup=3D=3D"BUG" ? =
+docDetails.productFamily : docDetails.docID;
+	clickstreamValue +=3D '" item_type=3D"';
+	clickstreamValue +=3D docDetails.docDataGroup=3D=3D"NOT" ? "DOCUMENT" : =
+docDetails.docDataGroup=3D=3D"BUG" ? "BUG" : docDetails.docDataGroup;
+	clickstreamValue +=3D '" open_new_window=3D"true" />]]></Click>';
+	sendClickstreamHTTP(clickstreamValue);
+}
+
+function sendClickstreamHTTP(clickstreamValue){
+  var clickstreamUrl =3D window.location.href;
+  var paramIndex =3D clickstreamUrl.indexOf('?');
+  if (paramIndex !=3D -1) {
+    clickstreamUrl =3D clickstreamUrl.substring(0, paramIndex);
+  } =20
+  var baseUrlIndex =3D clickstreamUrl.indexOf("/CSP/");
+  if (baseUrlIndex !=3D -1) {
+    clickstreamUrl =3D clickstreamUrl.substring(0, baseUrlIndex + 5);
+    clickstreamUrl +=3D "main/feedback?clickstream=3D";
+    clickstreamUrl +=3D "<Clickstream>";
+    clickstreamUrl +=3D clickstreamValue;
+    clickstreamUrl +=3D "</Clickstream>";
+    var localXMLHttpRequest;
+    if( typeof XMLHttpRequest!=3D'undefined' ) {
+    	localXMLHttpRequest=3D new XMLHttpRequest();
+    }
+    else {=09
+    	try {
+	    localXMLHttpRequest =3D new ActiveXObject("Msxml2.XMLHTTP");
+ 	} catch (e1) {
+  	    try {
+  		localXMLHttpRequest =3D new ActiveXObject("Microsoft.XMLHTTP");
+   	    } catch (e2) {}
+	}
+    }
+    if( localXMLHttpRequest ) {
+        localXMLHttpRequest.open("POST", clickstreamUrl, true);
+        localXMLHttpRequest.setRequestHeader("Content-type", =
+"application/x-www-form-urlencoded");
+        localXMLHttpRequest.setRequestHeader("Content-length", 0);
+      	localXMLHttpRequest.setRequestHeader("Connection", "close");
+        localXMLHttpRequest.onreadystatechange =3D function() {};
+        localXMLHttpRequest.send(null);
+    }
+  }
+}
+
+/*Methods & variables for the article feedback*/
+var questionIsAnswered =3D false;
+var commentsActivated =3D false;
+var requiresFeedBack =3D false;
+
+function questionAnswered()
+{
+	questionIsAnswered =3D true;
+=09
+        var formObj =3D document.forms["feedback"];
+        var rating =3D getCheckedValue(formObj.elements["rating"]);
+	var relevancy =3D getCheckedValue(formObj.elements["relevancy"]);
+	var easeOfUse =3D getCheckedValue(formObj.elements["easeOfUse"]);
+       =20
+	var feedBackTextObj =3D document.getElementById("feedBackText");
+	var initialCommentTextObj =3D =
+document.getElementById("initialCommentText");=09
+        var commentsObj =3D document.getElementById("commentsInput");
+               =20
+	if ( (rating =3D=3D 1) || (relevancy =3D=3D 2) || (easeOfUse =3D=3D 1) =
+) {
+		if ( (commentsObj.value =3D=3D initialCommentTextObj.value)  && =
+(!requiresFeedBack) ) {
+			commentsObj.value =3D feedBackTextObj.value;
+			commentsObj.style.color=3D"#FF0000";
+			commentsObj.style.fontWeight=3D"bold";
+		}
+		requiresFeedBack =3D true;
+		enableSubmit();
+		return;
+	}
+=09
+	if (commentsObj.value =3D=3D feedBackTextObj.value) {
+		commentsObj.value =3D initialCommentTextObj.value;
+		commentsObj.style.color=3D"#000000";
+		commentsObj.style.fontWeight=3D"normal";
+	}
+=09
+	requiresFeedBack =3D false;
+	enableSubmit();
+}
+
+function enableSubmit()
+{=09
+	var submitObj =3D document.getElementById("submitBtn");
+	var commentsObj =3D document.getElementById("commentsInput");
+        var feedBackTextObj =3D document.getElementById("feedBackText");
+       =20
+	if (commentsObj.value !=3D "" || questionIsAnswered) {
+		if (requiresFeedBack) {
+			if ( (commentsObj.value =3D=3D "") || (commentsObj.value =3D=3D =
+feedBackTextObj.value) )
+				submitObj.disabled =3D true;
+			else=09
+				submitObj.disabled =3D false;
+		} else {
+                    submitObj.disabled =3D false;
+                }
+	} else {
+		submitObj.disabled =3D tsrue;
+	}=09
+}
+
+function activateBox(obj){
+	if (commentsActivated) return;=09
+	obj.style.color=3D"#000000";
+	obj.style.fontWeight=3D"normal";
+	obj.className =3D "labelTextareaText";
+	obj.value =3D "";
+	commentsActivated =3D true;
+}
+
+function getCheckedValue(radioObj) {
+	if(!radioObj){
+		return "";
+	}
+	var radioLength =3D radioObj.length;
+	if(radioLength =3D=3D undefined){
+		if(radioObj.checked){
+			return radioObj.value;
+		}
+		else{
+			return "";
+		}
+	}
+	for(var i =3D 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+var feedbackXMLHttpRequest =3D null;
+function submitFeedback(){
+	displayFeedbackBox();
+	var formObj =3D document.forms["feedback"];
+	//compose Feedback URL
+	var feedbackValue =3D 'objectType=3DNOTE&';
+	feedbackValue +=3D '&articleId=3D' + =
+formObj.elements["articleId"].value;
+	feedbackValue +=3D '&relevancy=3D' + =
+getCheckedValue(formObj.elements["relevancy"]);
+	feedbackValue +=3D '&rating=3D' + =
+getCheckedValue(formObj.elements["rating"]);
+	feedbackValue +=3D '&easeOfUse=3D' + =
+getCheckedValue(formObj.elements["easeOfUse"]);
+	feedbackValue +=3D '&comments=3D' + =
+formObj.elements["commentsInput"].value;
+	//compose clickstream value
+	//for feedback
+	var clickstreamValue =3D '<Click category=3D"KM"><![CDATA[<entry =
+action_type=3D"submit_feedback" ';
+	clickstreamValue +=3D ' session_id=3D"' + sessId + '" ';
+	clickstreamValue +=3D ' item_id=3D"' + =
+formObj.elements["articleId"].value + '"';
+	clickstreamValue +=3D ' item_type=3D"DOCUMENT" =
+originating_region=3D"dsrvDocDisplay"';
+	clickstreamValue +=3D ' feedback=3D"' + =
+formObj.elements["commentsInput"].value + '"';
+	clickstreamValue +=3D '/>]]></Click>';
+	//for rating
+	clickstreamValue +=3D '<Click category=3D"KM"><![CDATA[<entry =
+action_type=3D"submit_rating" ';
+	clickstreamValue +=3D ' session_id=3D"' + sessId + '" ';
+	clickstreamValue +=3D ' item_id=3D"' + =
+formObj.elements["articleId"].value + '"';
+	clickstreamValue +=3D ' item_type=3D"DOCUMENT"';
+	clickstreamValue +=3D ' rating=3D"' + =
+getCheckedValue(formObj.elements["rating"]) + '"';
+	clickstreamValue +=3D ' problem_solved=3D"' + =
+getCheckedValue(formObj.elements["relevancy"]) + '"';
+	clickstreamValue +=3D ' findability=3D"' + =
+getCheckedValue(formObj.elements["easeOfUse"]) + '"';
+	clickstreamValue +=3D '/>]]></Click>';
+=09
+	var feedbackUrl =3D window.location.href;
+	var paramIndex =3D feedbackUrl.indexOf('?');
+	if (paramIndex !=3D -1) {
+		feedbackUrl =3D feedbackUrl.substring(0, paramIndex);
+	} =20
+	var baseUrlIndex =3D feedbackUrl.indexOf("/CSP/");
+	if (baseUrlIndex !=3D -1) {
+		feedbackUrl =3D feedbackUrl.substring(0, baseUrlIndex + 5);
+		feedbackUrl +=3D "main/article?cmd=3DsendArticleFeedback&" + =
+feedbackValue;
+		feedbackXMLHttpRequest =3D getHttpRequest();
+		if( feedbackXMLHttpRequest ) {
+			feedbackXMLHttpRequest.open("POST", feedbackUrl, true);
+			feedbackXMLHttpRequest.setRequestHeader("Content-type", =
+"application/x-www-form-urlencoded");
+			feedbackXMLHttpRequest.setRequestHeader("Content-length", 0);
+			feedbackXMLHttpRequest.setRequestHeader("Connection", "close");
+			feedbackXMLHttpRequest.onreadystatechange =3D =
+processArticleFeedbackCall;
+			feedbackXMLHttpRequest.send(null);
+			sendClickstreamHTTP(clickstreamValue);
+		}
+	}
+}
+
+function getHttpRequest(){
+	var localXMLHttpRequest;
+	if( typeof XMLHttpRequest!=3D'undefined' ) {
+		localXMLHttpRequest=3D new XMLHttpRequest();
+	}
+	else {=09
+		try {
+			localXMLHttpRequest =3D new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e1) {
+			try {
+				localXMLHttpRequest =3D new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e2) {}
+		}
+	}
+=09
+	return localXMLHttpRequest;
+}
+
+function checkArticleRatingStatus(){
+	if (!parent || !parent.IFrameLoaded) {
+	}
+	else{
+		var ratingLinkObj =3D document.getElementById("feedbackBottomLeft");
+		ratingLinkObj.style.display =3D "none";
+	}
+}
+
+function processArticleFeedbackCall(){
+	if ((feedbackXMLHttpRequest!=3Dnull) && =
+(feedbackXMLHttpRequest.readyState=3D=3D4)){
+		if(feedbackXMLHttpRequest.status=3D=3D200){
+			var xmlDoc=3DfeedbackXMLHttpRequest.responseXML;
+			var status =3D -1;
+			var message =3D null;
+			try{
+				var =
+statusAttributes=3DxmlDoc.getElementsByTagName("status")[0].attributes;
+				status =3D statusAttributes.getNamedItem("returnCode").nodeValue;=20
+			}catch(e1){}=20
+			try{
+				message=3DxmlDoc.getElementsByTagName("message")[0].nodeValue;
+			}catch(e2){}
+		=09
+			if(status =3D=3D 0){
+				alert(rateArticleSuccess);
+			}
+			else if(status =3D=3D 1){
+				alert(rateArticleFailure);
+			}
+		}
+		else{
+			alert(rateArticleFailure);
+		}
+	}
+}
+
+var feedbackBoxVisible =3D false;
+
+function displayFeedbackBox(){
+	var divObj =3D document.getElementById("feedbackBox");
+	if(feedbackBoxVisible){
+		divObj.style.display =3D "none";
+		feedbackBoxVisible =3D false;
+	}
+	else{
+		divObj.style.display =3D "inline";
+		feedbackBoxVisible =3D true;
+	}
+}
+
+------=_NextPart_000_0000_01CBC2FA.6893F290--
